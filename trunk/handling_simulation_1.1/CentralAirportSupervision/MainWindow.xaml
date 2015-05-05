@@ -1,0 +1,91 @@
+﻿<Window x:Class="CentralAirportSupervision.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="389" Width="596" MaxHeight="600" MaxWidth="596">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="28"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Configuration">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Storage Capacity" Grid.ColumnSpan="2" VerticalAlignment="Center" />
+                <TextBox Grid.Column="1" Text="250" VerticalAlignment="Center" TextAlignment="Center" x:Name="txtCapacity" PreviewTextInput="ModifyInterval"/>
+                <TextBlock Text="Conveyor's Speed" Grid.Column="2" VerticalAlignment="Center" Margin="3 0 3 0"/>
+                <TextBox Grid.Column="3" Text="12" TextAlignment="Center" VerticalAlignment="Center" ToolTip="Km/h" x:Name="txtSpeed" PreviewTextInput="ModifyInterval" />
+                <TextBlock Text="Domain" Grid.Row="1" VerticalAlignment="Center" />
+                <TextBox Text="HandlingSimulation" Grid.Row="1" Grid.Column="1" x:Name="txtDomain" MaxLength="5" TextAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="Parcel Interval" Grid.Row="1" Grid.Column="2" Margin="3 0 0 0" VerticalAlignment="Center"/>
+                <TextBox Grid.Row="1" Grid.Column="3" Name="txtInterval" Text="1" TextAlignment="Center" ToolTip="second(s)" VerticalAlignment="Center" PreviewTextInput="ModifyInterval"  />
+                <TextBlock Text="Port" Grid.Row="2" VerticalAlignment="Center"/>
+                <TextBox Text="8000" Grid.Row="2" Grid.Column="1" x:Name="txtPort" TextAlignment="Center" VerticalAlignment="Center" MaxLength="5" PreviewTextInput="ModifyInterval"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Report" Grid.Row="1" Grid.RowSpan="3">
+            <ListBox Name="lstOutput">
+                <ListBox.ItemTemplate >
+                    <DataTemplate DataType="HandlingEntry">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Path=Date}" />
+                            <TextBlock Text="{Binding Path=Description}" Grid.Column="2" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Clear" Click="Clear">
+                            <MenuItem.Icon >
+                                <Image Source="Resources/delete.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+        </GroupBox>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Start" Grid.Column="4" Margin="0 5 5 5" Click="UpdateServerState" Name="btnStart"/>
+        </Grid>
+        <StatusBar Grid.Row="5">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem>State:</StatusBarItem>
+            <StatusBarItem Grid.Column="1" Name="itemState">Stop</StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

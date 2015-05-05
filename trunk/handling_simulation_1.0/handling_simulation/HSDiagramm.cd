@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Use to serialize all zone contained in the AirportArea">
+    <Position X="7.583" Y="4.164" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="Nth.Eindhoven.Fontys.ComponentsBar" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQECAAAAQAAAiAAAACIAACAAAAABAAABAAAAQ=</HashCode>
+      <FileName>ComponentsBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nth.Eindhoven.Fontys.ControlNode">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ControlNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nth.Eindhoven.Fontys.HandlingSimulation">
+    <Position X="3.25" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="ClickedOnPlotLine" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="FormResize" Hidden="true" />
+      <Method Name="FormResizeEnd" Hidden="true" />
+      <Method Name="HandlingSimulation" Hidden="true" />
+      <Method Name="InitializeAttributes" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="InitializeFileSystemWatcher" Hidden="true" />
+      <Method Name="StatusBarToolClick" Hidden="true" />
+      <Method Name="ToolBarToolClick" Hidden="true" />
+      <Method Name="WndProc" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="propertiesControl" Type="Nth.Eindhoven.Fontys.PropertiesControl">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.609" Y="-0.659" Height="0.182" Width="1.266" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="componentsBar" Type="Nth.Eindhoven.Fontys.ComponentsBar">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.536" Y="-0.628" Height="0.182" Width="1.235" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EJCAD/0JDCM4EAQoCgCygAdSCCBGIMwBKiwARjEEEUc=</HashCode>
+      <FileName>HandlingSimulation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="navigationBar" />
+      <Field Name="propertiesControl" />
+      <Field Name="componentsBar" />
+      <Field Name="airportArea" />
+      <Field Name="outputControl" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Nth.Eindhoven.Fontys.NavigationBar">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Members>
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="NavigationBar" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAQAAACAIAACAIAgAAAAoAAAAAAAAIA=</HashCode>
+      <FileName>NavigationBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nth.Eindhoven.Fontys.OutputControl" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAACAAAgCIAAAAAAAAAAAAAAAAKQ=</HashCode>
+      <FileName>OutputControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nth.Eindhoven.Fontys.PropertiesControl" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAIQAAAKAgAACOACAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>PropertiesControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Forms.AirportArea" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,25 @@
+﻿<UserControl xmlns:my="clr-namespace:Airport.Controls"  x:Class="Airport.Controls.AirportDrawing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             xmlns:lib="clr-namespace:DrawToolsLib;assembly=DrawToolsLib" >
+    <UserControl.Resources>
+        <ControlTemplate x:Key="CircleLabel" TargetType="{x:Type Label}">
+            <Grid x:Name="Grid">
+                <Ellipse Stroke="Black" x:Name="Ellipse" Fill="White"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"/>
+            </Grid>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid MouseLeave="OnMouseLeave" >
+        <my:AirportArea x:Name="airportArea" ClickOnAirportZone="AirportZoneOnMouseDown" DropNewAirportZone="NewAirportZoneWasDropped"  >
+        </my:AirportArea>
+        <lib:DrawingCanvas Name="drawingCanvas" Tool="Pointer" Background="Transparent" IsHitTestVisible="False" MouseLeftButtonDown="OnMouseDown" MouseMove="OnMouseMove" MouseUp="OnMouseUp" >
+        </lib:DrawingCanvas>
+        <UniformGrid IsHitTestVisible="False" Rows="{Binding ElementName=airportArea, Path=Rows}" Columns="{Binding ElementName=airportArea, Path=Columns}" Name="contentZones"/>
+        <Canvas IsHitTestVisible="False" Name="contentWays" />
+    </Grid>
+</UserControl>

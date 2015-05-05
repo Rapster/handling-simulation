@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Airport.Controls.AirportArea">
+    <Position X="11.25" Y="0.5" Width="4" />
+    <Members>
+      <Method Name="GetTypeAirportZone" Hidden="true" />
+      <Method Name="Insert" Hidden="true" />
+      <Method Name="SetEventsToZone" Hidden="true" />
+      <Method Name="UnSetEventsFromZone" Hidden="true" />
+      <Method Name="ZoneMouseDown" Hidden="true" />
+      <Method Name="ZoneMouseDragEnter" Hidden="true" />
+      <Method Name="ZoneMouseDrop" Hidden="true" />
+      <Method Name="ZoneMouseEnter" Hidden="true" />
+      <Method Name="ZoneMouseLeave" Hidden="true" />
+      <Method Name="ZoneMouseMove" Hidden="true" />
+      <Method Name="ZoneMouseUp" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Zones" Type="Airport.Controls.AirportZone" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="1.438" />
+        <Point X="9.25" Y="1.438" />
+        <Point X="9.25" Y="5.838" />
+        <Point X="7.5" Y="5.838" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>kAAgAMQABAAAAA4ABAQABgACAEAAEIADKMBAAABQAAA=</HashCode>
+      <FileName>Controls\AirportArea.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Zones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Airport.Controls.AirportDrawing">
+    <Position X="2.5" Y="11.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Airport.Controls.AirportDrawing.SelectedMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Controls\AirportDrawing.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQIIAAgIAGIYAkEACBIhACOKMBBAACAAJJAAIAlSDmQ=</HashCode>
+      <FileName>Controls\AirportDrawing.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Controls.AirportZone">
+    <Position X="2.25" Y="3.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAQggAIAAAQAAAAAIAAkAAEgIQAJAAA=</HashCode>
+      <FileName>Controls\AirportZone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Airport.Controls.CheckIn" Collapsed="true">
+    <Position X="2.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\CheckIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Controls.Conveyor">
+    <Position X="4.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAgAAAAAAAAAAABgAEAAAAAAABA=</HashCode>
+      <FileName>Controls\Conveyor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Controls.DestinationGate">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Controls\DestinationGate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Controls.Sorter">
+    <Position X="6.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAABACAAAAAAAAQAEAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Sorter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Tools.Storage">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <AssociationLine Name="Luggages" Type="Airport.Tools.Luggage">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.419" Y="0.214" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAIIAAQBAAgAAAAIAAgAAAAAAAA=</HashCode>
+      <FileName>Tools\Storage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Luggages" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Airport.Controls.Way">
+    <Position X="11.5" Y="12.5" Width="1.5" />
+    <AssociationLine Name="Conveyors" Type="Airport.Controls.Conveyor">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAwAgABAQCAAAAAQFAAAABAABEAAA=</HashCode>
+      <FileName>Controls\Way.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Conveyors" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Airport.Tools.Luggage">
+    <Position X="8.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools\Luggage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Utils.Factories.AirportZoneFactory" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Utils\Factories\AiportZoneFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Utils.Factories.AirportFactory">
+    <Position X="2.25" Y="0.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Utils\Factories\AirportFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Utils.AirportFile" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="AirportFile" Hidden="true" />
+      <Method Name="GetSchema" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAACIABAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Utils\AirportFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Airport.Utils.Factories.CheckInFactory" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Utils\Factories\CheckInFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Utils.Factories.DestinationGateFactory" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Utils\Factories\DestinationGateFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Utils.Factories.SorterFactory">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Utils\Factories\SorterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Controls.Ways">
+    <Position X="11.25" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAAAAAAAAIAAAEAAAAAACAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Controls\Ways.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Airport.Tools.Package">
+    <Position X="8.5" Y="6.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAKAAACAACBAAAAAAAAoAASBAAAAgACAAAgCAAAAAAA=</HashCode>
+      <FileName>Tools\Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Airport.Utils.Index">
+    <Position X="11.25" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAYiA=</HashCode>
+      <FileName>Utils\Index.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Delegate Name="Airport.Controls.AirportHandler" Collapsed="true">
+    <Position X="13.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\AirportArea.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Airport.Controls.AirportClickHandler" Collapsed="true">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Controls\AirportArea.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Airport.Controls.ConveyorHandler" Collapsed="true">
+    <Position X="13.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\AirportDrawing.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
